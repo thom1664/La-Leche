@@ -11,16 +11,16 @@
     border: 2px outset black;
     /* background-color: rgb(191, 171, 199); */
     height: 600px;
-    width: 1030px;
-    position: fixed;
+    width: 1130px;
     border-radius: 10px;
+    display: inline-block;
 }
 
 #contact_box {
     border: 2px outset black;
     /* background-color: rgb(191, 171, 199); */
     height: 400px;
-    width: 470px;
+    /* width: 470px; */
     float: right;
     border-radius: 10px;
     text-align: center;
