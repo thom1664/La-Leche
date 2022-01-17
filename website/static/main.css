@@ -2,14 +2,14 @@
     color: black;
     border: 2px outset black;
     font-size: 25px;
-    /* background-color: rgb(154, 159, 204); */
+    background-color: rgb(172, 227, 218);
     border-radius: 10px;
     height: 150px;
 }
 
 #gallery_box {
     border: 2px outset black;
-    /* background-color: rgb(191, 171, 199); */
+    /* background-color: lightgoldenrodyellow; */
     height: 600px;
     width: 1130px;
     border-radius: 10px;
@@ -18,9 +18,9 @@
 
 #contact_box {
     border: 2px outset black;
-    /* background-color: rgb(191, 171, 199); */
+    /* background-color: lightblue; */
     height: 400px;
-    /* width: 470px; */
+    width: 350px;
     float: right;
     border-radius: 10px;
     text-align: center;
