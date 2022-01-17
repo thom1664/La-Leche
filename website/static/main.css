@@ -26,7 +26,7 @@
     text-align: center;
 }
 
-#items {
+#items_inside_gallery_box {
     border: 2px outset red;
     /* background-color: lightgoldenrodyellow; */
     height: 490px;
