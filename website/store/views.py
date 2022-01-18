@@ -4,6 +4,8 @@ from django.views.generic import TemplateView
 from .models import Store
 # Create your views here.
 
+#this is a test
+#sdbsbhhsbs
 
 class HomePage(TemplateView):
     model = Store
