@@ -1,16 +1,22 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
 #heading {
     color: black;
     border: 2px outset black;
     font-size: 25px;
     background-color: rgb(172, 227, 218);
     /* border-radius: 10px; */
-    height: 130px;
+    height: 20%;
 }
 
 #gallery_box {
     border: 5px outset black;
     /* background-color: lightgoldenrodyellow; */
-    height: 600px;
+    height: 80%;
     width: 74%;
     /* border-radius: 10px; */
     display: inline-block;
@@ -19,7 +25,7 @@
 #contact_box {
     border: 8px outset black;
     /* background-color: lightblue; */
-    height: 600px;
+    height: 80%;
     width: 25%;
     float: right;
     border-radius: 10px;
@@ -29,7 +35,7 @@
 #items_inside_gallery_box {
     border: 2px outset red;
     /* background-color: lightgoldenrodyellow; */
-    height: 490px;
+    height: 80%;
     width: 100%;
     /* border-radius: 10px; */
     overflow: auto;
