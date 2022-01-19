@@ -9,7 +9,12 @@
 <body>
     <h1>Add Itfsgsd</h1>
     <a href="/"> Return to home page</a>
-    <div method="post">
+    <div>
+        <form method="post">
+            {%csrf_token%}{{form.as_p}}
+            <br>
+            <input type="submit" value="Add Item">
+        </form>
 
 
     </div>

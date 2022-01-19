@@ -1,4 +1,5 @@
 
+from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView
 from .models import Store
@@ -19,3 +20,4 @@ class CreateItem(CreateView):
     model = Store
     template_name = "add_item.html"
     fields = ['name', 'cost', 'quantity', 'image']
+    success_url = reverse_lazy('home')
