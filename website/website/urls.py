@@ -20,7 +20,7 @@ from store.views import HomePage, OwnerPage, CreateItem
 
 # wesite urls
 urlpatterns = [
-    path('admin', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', HomePage.as_view(), name="home"),
     path('add', CreateItem.as_view(), name="add_item"),
 
