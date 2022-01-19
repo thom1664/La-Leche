@@ -1,6 +1,6 @@
 
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
 from .models import Store
 # Create your views here.
 
@@ -12,6 +12,12 @@ class HomePage(TemplateView):
     template_name = "home.html"
 
 
-class AdminPage(TemplateView):
+class OwnerPage(TemplateView):
     mode = Store
-    template_name = "adminpage.html"
+    template_name = "ownerPage.html"
+
+
+class CreateItem(CreateView):
+    model = Store
+    template_name = "add_item.html"
+    fields = ['name', 'cost', 'quantity', 'image']
