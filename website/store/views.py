@@ -14,8 +14,8 @@ class HomePage(ListView):
     #     return render(request, '../template/home.html', {'product_list': product_list})
 
     # def get_context_data(self, **kwargs):
-    #     product_id = kwargs['pk']
-    #     product = Product.objects.get(pk=product_id)
+
+    #     product = Product.objects.all()
     #     return{'product': product}
 
 

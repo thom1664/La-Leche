@@ -27,7 +27,11 @@
         <div id="items_inside_gallery_box">
 
                 {% for product in object_list %}
-                  <p>{{ product.image }}</p>
+                  <h1>{{product.name}}</h1>
+                  <p>{{product.cost}}</p>
+                  <p>product.qunatity</p>
+                  <img src="{{product.image}}" alt="{{product.name}}" width="300px">
+                  <hr>
                 {% endfor %}
 
 
