@@ -5,10 +5,10 @@ from django.db import models
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=100)
-    cost = models.TextField(max_length=300, default="")
+    cost = models.CharField(max_length=300, default="")
     # description = models.TextField(max_length=300, default="")
-    quantity = models.TextField(max_length=300, default="")
-    image = models.CharField(max_length=200)
+    quantity = models.CharField(max_length=300, default="")
+    image = models.CharField(max_length=300)
 
     def __str__(self):
         return f"{self.name}"

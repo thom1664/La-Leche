@@ -16,8 +16,6 @@
         <p class="btn btn-success">Owner Login</p>
         <a class="btn btn-success" href="add"> Add Item</a>
 
-
-
     </div>
 
 
@@ -28,17 +26,11 @@
 
                 {% for product in object_list %}
                   <h1>{{product.name}}</h1>
-                  <p>{{product.cost}}</p>
-                  <p>product.qunatity</p>
+                  <p> Price: {{product.cost}}</p>
+                  <p> Quantity: {{product.quantity}}</p>
                   <img src="{{product.image}}" alt="{{product.name}}" width="300px">
                   <hr>
                 {% endfor %}
-
-
-
-
-
-
 
         </div>
     </div>
