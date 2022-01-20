@@ -16,7 +16,7 @@ Including another URLconf
 from sys import getprofile
 from django.contrib import admin
 from django.urls import path
-from store.views import HomePage, OwnerPage, CreateItem
+from store.views import HomePage, OwnerPage, CreateItem, DeletePage
 
 
 # wesite urls
