@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-!ue_s9swlw$^q8(i39r7tf$6+!v$_nng64n^uvwj1aad8o1d)k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['omoo13.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['omoo13.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -127,3 +127,5 @@ STATICFILES_DIRS = [join(BASE_DIR, 'static'), ]
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

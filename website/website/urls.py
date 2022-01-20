@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from store.views import HomePage, AdminPage
+from store.views import HomePage, AdminPage, DeletePage
 
 
 # wesite urls
 urlpatterns = [
     path('admin', admin.site.urls),
     path('', HomePage.as_view()),
+    path('delete/<int:pk>', DeletePage.as_view()),
 
 ]
