@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeley Asian Store</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../static/main.css">
+    <link rel="stylesheet" href="./static/main.css">
 </head>
 
 <body id="body">
@@ -20,13 +20,24 @@
 
     </div>
 
+
     <div id="gallery_box">
         <h1> Gallery </h1>
         <hr>
         <div id="items_inside_gallery_box">
-            <table>
-                <tr>Stuuuuuuuuuupppp</tr>
-            </table>
+
+                {% for product in object_list %}
+                  <h1>{{product.name}}</h1>
+                  <p>{{product.cost}}</p>
+                  <p>product.qunatity</p>
+                  <img src="{{product.image}}" alt="{{product.name}}" width="300px">
+                  <hr>
+                {% endfor %}
+
+
+
+
+
 
 
         </div>

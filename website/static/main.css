@@ -33,6 +33,7 @@ body {
 }
 
 #items_inside_gallery_box {
+    text-align: center;
     border: 2px outset red;
     /* background-color: lightgoldenrodyellow; */
     height: 80%;

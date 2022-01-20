@@ -3,7 +3,7 @@ from django.db import models
 
 
 # Create your models here.
-class Store(models.Model):
+class Product(models.Model):
     name = models.CharField(max_length=100)
     cost = models.TextField(max_length=300, default="")
     # description = models.TextField(max_length=300, default="")
