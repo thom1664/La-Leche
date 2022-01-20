@@ -31,3 +31,8 @@ class CreateItem(CreateView):
     template_name = "add_item.html"
     fields = ['name', 'cost', 'quantity', 'image']
     success_url = reverse_lazy('home')
+
+class DeletePage(TemplateView):
+    model = Store
+    template_name = "delete_item.html"
+    success_url = reverse_lazy('home')
