@@ -1,11 +1,13 @@
 
+from itertools import product
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView, ListView
 from .models import Product
 # Create your views here.
 
-#this is a test
-#sdbsbhhsbs
+# this is a test
+# sdbsbhhsbs
+
 
 class HomePage(ListView):
     model = Product
@@ -32,7 +34,8 @@ class CreateItem(CreateView):
     fields = ['name', 'cost', 'quantity', 'image']
     success_url = reverse_lazy('home')
 
+
 class DeletePage(TemplateView):
-    model = Store
+    model = Product
     template_name = "delete_item.html"
     success_url = reverse_lazy('home')
