@@ -41,3 +41,10 @@ body {
     /* border-radius: 10px; */
     overflow: auto;
 }
+#add_page_body{
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+
