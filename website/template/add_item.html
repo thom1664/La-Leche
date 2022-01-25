@@ -1,22 +1,51 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/main.css">
+
     <title>Add Item</title>
 </head>
-<body>
-    <h1>Add Itfsgsd</h1>
+<body id="add_page_body">
+    <h1 id>Add Item</h1>
     <a href="/"> Return to home page</a>
-    <div>
+    <br>
+    <br>
+    <br>
+    <div id="add_form_out">
+
         <form method="post">
-            {%csrf_token%}{{form.as_p}}
+            {%csrf_token%}
+            <!-- <p>d &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vvdvd</p> -->
+
+            Name:
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            {{form.name}}
+            <br>
+            <br>
+            Cost:
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            {{form.cost}}
+            <br>
+            <br>
+            Quantity:
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            {{form.quantity}}
+            <br>
+            <br>
+            Image:
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            {{form.image}}
+
+            <br>
+
             <br>
             <input type="submit" value="Add Item">
+
         </form>
-
-
     </div>
 
 </body>
