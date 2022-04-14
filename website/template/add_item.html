@@ -1,52 +1,44 @@
+{%extends 'store_theme.html'%}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/main.css">
-
-    <title>Add Item</title>
-</head>
-<body id="add_page_body">
+{% block content%}
+{% if user.is_authenticated%}
+<div id="add_page_body" >
     <h1 id>Add Item</h1>
-    <a href="/"> Return to home page</a>
     <br>
-    <br>
-    <br>
-    <div id="add_form_out">
+    <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        <table id="table">
+            <tr>
+                <td id="form_descriptor">Name:</td>
 
-        <form method="post">
-            {%csrf_token%}
-            <!-- <p>d &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp vvdvd</p> -->
+                <td id="form_input">{{form.name}}</td>
+            </tr>
 
-            Name:
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            {{form.name}}
-            <br>
-            <br>
-            Cost:
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            {{form.cost}}
-            <br>
-            <br>
-            Quantity:
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            {{form.quantity}}
-            <br>
-            <br>
-            Image:
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            {{form.image}}
+            <tr>
+                <td id="form_descriptor">Cost ($):</td>
+                <td id="form_input">{{form.cost}}</td>
+            </tr>
 
-            <br>
+            <tr>
+                <td id="form_descriptor">Quantity:</td>
+                <td id="form_input">{{form.quantity}}</td>
+            </tr>
 
-            <br>
-            <input type="submit" value="Add Item">
+            <tr>
+                <td id="form_descriptor">Image:</td>
+                <td id="form_input">{{form.image}}</td>
+            </tr>
+        </table>
 
-        </form>
-    </div>
+        <div>
+            <button type="submit">Add Item</button>
+            <button type="button" onclick=location.href="{% url 'owner'%}">Go Back</button>
+        </div>
 
-</body>
-</html>
+    </form>
+</div>
+{%else%}
+<h1>User Is Not Authenticated</h1>
+{%endif%}
+
+
+{%endblock content%}

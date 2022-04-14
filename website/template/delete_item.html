@@ -1,19 +1,47 @@
-{% extends 'home.html'%} {% block content %}
+{% extends 'store_theme.html'%}
+{% block content %}
+{% if user.is_authenticated%}
 
-<h1>Delete</h1>
-<hr>
-
-<div id="body-main"> {% if user.is_authenticated %}
-    <form method="post">
-        {% csrf_token %}
-        <p>Are you sure you want to delete item?</p>
-        <button type="submit" value="Confirm">Yes</button>
-    </form>
+<h2>Delete</h2>
+<div>
+    <div id="gallery_box" >
 
 
-    {% else %}
-    <p>You are not logged in</p>
-    <a class="link" href="/">Go Home</a>
-    {% endif %}
+
+        <form method="post">
+            <table id="table">
+                <tr>
+                    <td id="form_descriptor">Name:</td>
+                    <td id="form_input">{{product.name}}</td>
+                </tr>
+
+                <tr>
+                    <td id="form_descriptor">Cost ($):</td>
+                    <td id="form_input">{{product.cost}}</td>
+                </tr>
+
+                <tr>
+                    <td id="form_descriptor">Quantity:</td>
+                    <td id="form_input">{{product.quantity}}</td>
+                </tr>
+
+                <tr>
+                    <td id="form_descriptor">Image:</td>
+                    <td id="form_input">{{product.image}}</td>
+                </tr>
+            </table>
+            {% csrf_token %}
+            <p>Are you sure you want to delete item?</p>
+            <button type="submit" value="Confirm">Yes</button>
+            <button type="button" onclick=location.href="{% url 'owner'%}">Go Back</button>
+
+        </form>
+    </div>
+
 </div>
-{% endblock content %}
+
+{%else%}
+<h1>User Is Not Authenticated</h1>
+{%endif%}
+
+{%endblock content%}

@@ -1,0 +1,32 @@
+<div id="navigate" width="500px">
+    <h1 id="title"> Greeley Asian Store </h1>
+
+    <form id="search"method="GET" action="/search">
+        {% csrf_token %}
+        <input type="text" placeholder="Search item" name="q" ></input>
+        <input id="submit" type="submit"></input>
+    </form>
+</div>
+{% if user.is_authenticated %}
+    <div id="navigate_2">
+        <a id = "home" href="{% url 'add_item'%}">Add Item </a>
+        <a id = "home" href="{% url 'notification'%}">Notification </a>
+        <a href="contact" id="contact_info"> Contact Information</a>
+        <a id = "home" href="{% url 'home'%}">Customer Page </a>
+        <a id = "home" href="{% url 'owner'%}">Owner Page </a>
+
+
+        <a id="owner_login" href="{% url 'logout' %}"> Logout</a>
+
+        </div>
+{%else%}
+
+<div id="navigate_2">
+
+<a href="contact" id="contact_info"> Contact Information</a>
+<a id = "home" href="{% url 'home'%}">Home </a>
+<a id="owner_login" href="{% url 'login' %}"> Owner's|Login</a>
+</div>
+{%endif%}
+<hr>
+

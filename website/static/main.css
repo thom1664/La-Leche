@@ -3,25 +3,74 @@ body {
     margin: 0;
     height: 100%;
 }
-
-#heading {
-    color: black;
-    border: 2px outset black;
-    font-size: 25px;
-    background-color: rgb(172, 227, 218);
-    /* border-radius: 10px; */
-    height: 20%;
+#home{
+    font-size: large;
 }
+#navigate {
 
+
+    background-color: black;
+    overflow: auto;
+}
+#navigate_2{
+    float: right;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px 20px;
+    overflow: auto;
+}
+#submit{
+    background-color: lightblue;
+}
+#contact_info{
+    font-size: large;
+}
+#owner_login{
+    font-size: large;
+}
+#title{
+    color: white;
+    font-size: 70px;
+}
+h2{
+    text-align: center;
+    color: orange;
+}
 #gallery_box {
-    border: 5px outset black;
-    /* background-color: lightgoldenrodyellow; */
+    /* background-color: #ffb3b3; */
+    padding: 40px;
+    text-align: center;
+    /* border: 5px outset black;
+    height: 50%; */
+    width: 100%;
+    /* border-radius: 10px; */
+    /* border: 5px outset black;
+    background-color: lightgoldenrodyellow;
     height: 80%;
     width: 74%;
-    /* border-radius: 10px; */
-    display: inline-block;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly; */
 }
+#owner_gallery_box {
 
+
+    padding: 40px;
+    /* align-items: center; */
+    /* border: 5px outset black; */
+
+    width: 100%;
+    /* border-radius: 10px; */
+    /* border: 5px outset black;
+    background-color: lightgoldenrodyellow;
+    height: 80%;
+    width: 74%;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly; */
+}
 #contact_box {
     border: 8px outset black;
     /* background-color: lightblue; */
@@ -31,20 +80,74 @@ body {
     border-radius: 10px;
     text-align: center;
 }
-
 #items_inside_gallery_box {
-    text-align: center;
-    border: 2px outset red;
-    /* background-color: lightgoldenrodyellow; */
-    height: 80%;
-    width: 100%;
-    /* border-radius: 10px; */
-    overflow: auto;
+
+    /* background-color: green;
+    height: 300px; */
+
+    display: flex;
+    flex-flow: row wrap;
+    gap: 150px 150px;
+    align-items: stretch;
+}
+#product {
+    align-items: center;
+    width: 40%;
 }
 #add_page_body{
-    color: white;
+
+    color: black;
+    width: 100%;
+    margin: auto;
+    /* border: solid 5px; */
+    /* border-color: red; */
     text-align: center;
-    background-color: black;
 }
+#table{
+    /* border: solid 5px; */
+    /* border-color: firebrick; */
+    margin: auto;
+}
+th, td {
+    width:150px;
+    text-align:center;
+    /* border:1px solid black; */
+    padding:5px
 
+}
+#contact_page{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+#notification_page{
+    margin: auto;
+    text-align: center;
+}
+#notification_text_ct{
+    text-align: left;
+    display: inline-block;
+}
+#individual_text_ct{
+    margin-top: 25px;
+}
+h4{
+    margin-bottom: -10px;
+}
+#edit{
+    margin: auto;
+    text-align: center;
+}
+#login{
+    text-align: center;
 
+}
+#itemnot{
+    border: solid 3px;
+    margin: auto;
+    padding: 0%;
+    text-align: center;
+    color:white;
+    background-color: brown;
+    font-size: 50px;
+}
